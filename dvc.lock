@@ -1,0 +1,35 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python3 src/train.py
+    deps:
+    - path: data
+      md5: 687552951726b99c2eee15d29b4ccf0e.dir
+      size: 17397976
+      nfiles: 3
+    - path: src
+      md5: 57f99becc6efff8a309d9527133f5f14.dir
+      size: 13860
+      nfiles: 4
+    params:
+      params.yaml:
+        model:
+          conv_units: 16
+        train:
+          epochs: 10
+    outs:
+    - path: dvclive/metrics.json
+      md5: 7517775fd68e9b34ac14900fa880a1ed
+      size: 203
+    - path: dvclive/plots
+      md5: cc56c2d7515bec2b09e83ecef076144b.dir
+      size: 921
+      nfiles: 4
+    - path: models
+      md5: ae89d9f09588702383a104a1ccada989.dir
+      size: 4208952
+      nfiles: 1
+    - path: plots
+      md5: 959b84f35ac76a04a886d433e4d78300.dir
+      size: 70715
+      nfiles: 2
