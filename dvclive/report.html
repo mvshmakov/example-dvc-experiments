@@ -22,10 +22,10 @@
             <div style="display: flex;justify-content: center;">
                 <table>
 <thead>
-<tr><th>train                                                   </th><th>eval                                                     </th><th style="text-align: right;">  step</th></tr>
+<tr><th>train                                                  </th><th>eval                                                   </th><th style="text-align: right;">  step</th></tr>
 </thead>
 <tbody>
-<tr><td>{&#x27;loss&#x27;: 0.03869708627462387, &#x27;acc&#x27;: 0.9872499704360962}</td><td>{&#x27;loss&#x27;: 0.039395395666360855, &#x27;acc&#x27;: 0.9866999983787537}</td><td style="text-align: right;">     9</td></tr>
+<tr><td>{&#x27;loss&#x27;: 0.0371830090880394, &#x27;acc&#x27;: 0.9879999756813049}</td><td>{&#x27;loss&#x27;: 0.03633162006735802, &#x27;acc&#x27;: 0.987500011920929}</td><td style="text-align: right;">     9</td></tr>
 </tbody>
 </table>
             </div>
@@ -40,165 +40,84 @@
     {
         "rev": "workspace",
         "step": "0",
-        "train/loss": "0.32127296924591064"
+        "train/loss": "0.3148232400417328"
     },
     {
         "rev": "workspace",
         "step": "1",
-        "train/loss": "0.13573488593101501"
+        "train/loss": "0.13253656029701233"
     },
     {
         "rev": "workspace",
         "step": "2",
-        "train/loss": "0.09995921701192856"
+        "train/loss": "0.09879279136657715"
     },
     {
         "rev": "workspace",
         "step": "3",
-        "train/loss": "0.08195537328720093"
+        "train/loss": "0.07859817892313004"
     },
     {
         "rev": "workspace",
         "step": "4",
-        "train/loss": "0.06916692852973938"
+        "train/loss": "0.06671974062919617"
     },
     {
         "rev": "workspace",
         "step": "5",
-        "train/loss": "0.0627480000257492"
+        "train/loss": "0.05908016860485077"
     },
     {
         "rev": "workspace",
         "step": "6",
-        "train/loss": "0.054744333028793335"
+        "train/loss": "0.052082132548093796"
     },
     {
         "rev": "workspace",
         "step": "7",
-        "train/loss": "0.04945988208055496"
+        "train/loss": "0.046318504959344864"
     },
     {
         "rev": "workspace",
         "step": "8",
-        "train/loss": "0.043372951447963715"
+        "train/loss": "0.04190007969737053"
     },
     {
         "rev": "workspace",
         "step": "9",
-        "train/loss": "0.03869708627462387"
+        "train/loss": "0.0371830090880394"
     }
 ]
     },
     "title": "",
     "width": 300,
     "height": 300,
-    "layer": [
-        {
-            "encoding": {
-                "x": {
-                    "field": "step",
-                    "type": "quantitative",
-                    "title": "step"
-                },
-                "y": {
-                    "field": "train/loss",
-                    "type": "quantitative",
-                    "title": "train/loss",
-                    "scale": {
-                        "zero": false
-                    }
-                },
-                "color": {
-                    "field": "rev",
-                    "type": "nominal"
-                }
-            },
-            "layer": [
-                {
-                    "mark": "line"
-                },
-                {
-                    "selection": {
-                        "label": {
-                            "type": "single",
-                            "nearest": true,
-                            "on": "mouseover",
-                            "encodings": [
-                                "x"
-                            ],
-                            "empty": "none",
-                            "clear": "mouseout"
-                        }
-                    },
-                    "mark": "point",
-                    "encoding": {
-                        "opacity": {
-                            "condition": {
-                                "selection": "label",
-                                "value": 1
-                            },
-                            "value": 0
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "transform": [
-                {
-                    "filter": {
-                        "selection": "label"
-                    }
-                }
-            ],
-            "layer": [
-                {
-                    "mark": {
-                        "type": "rule",
-                        "color": "gray"
-                    },
-                    "encoding": {
-                        "x": {
-                            "field": "step",
-                            "type": "quantitative"
-                        }
-                    }
-                },
-                {
-                    "encoding": {
-                        "text": {
-                            "type": "quantitative",
-                            "field": "train/loss"
-                        },
-                        "x": {
-                            "field": "step",
-                            "type": "quantitative"
-                        },
-                        "y": {
-                            "field": "train/loss",
-                            "type": "quantitative"
-                        }
-                    },
-                    "layer": [
-                        {
-                            "mark": {
-                                "type": "text",
-                                "align": "left",
-                                "dx": 5,
-                                "dy": -5
-                            },
-                            "encoding": {
-                                "color": {
-                                    "type": "nominal",
-                                    "field": "rev"
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+    "mark": {
+        "type": "line",
+        "point": true,
+        "tooltip": {
+            "content": "data"
         }
-    ]
+    },
+    "encoding": {
+        "x": {
+            "field": "step",
+            "type": "quantitative",
+            "title": "step"
+        },
+        "y": {
+            "field": "train/loss",
+            "type": "quantitative",
+            "title": "train/loss",
+            "scale": {
+                "zero": false
+            }
+        },
+        "color": {
+            "field": "rev",
+            "type": "nominal"
+        }
+    }
 }
 ;
             vegaEmbed('#static_train_loss', spec);
@@ -215,165 +134,84 @@
     {
         "rev": "workspace",
         "step": "0",
-        "train/acc": "0.9047666788101196"
+        "train/acc": "0.9070333242416382"
     },
     {
         "rev": "workspace",
         "step": "1",
-        "train/acc": "0.9578499794006348"
+        "train/acc": "0.9592333436012268"
     },
     {
         "rev": "workspace",
         "step": "2",
-        "train/acc": "0.9692999720573425"
+        "train/acc": "0.9688000082969666"
     },
     {
         "rev": "workspace",
         "step": "3",
-        "train/acc": "0.9742500185966492"
+        "train/acc": "0.975933313369751"
     },
     {
         "rev": "workspace",
         "step": "4",
-        "train/acc": "0.9772666692733765"
+        "train/acc": "0.9785666465759277"
     },
     {
         "rev": "workspace",
         "step": "5",
-        "train/acc": "0.9800833463668823"
+        "train/acc": "0.9808833599090576"
     },
     {
         "rev": "workspace",
         "step": "6",
-        "train/acc": "0.982450008392334"
+        "train/acc": "0.9829333424568176"
     },
     {
         "rev": "workspace",
         "step": "7",
-        "train/acc": "0.9834333062171936"
+        "train/acc": "0.9847000241279602"
     },
     {
         "rev": "workspace",
         "step": "8",
-        "train/acc": "0.9854000210762024"
+        "train/acc": "0.985966682434082"
     },
     {
         "rev": "workspace",
         "step": "9",
-        "train/acc": "0.9872499704360962"
+        "train/acc": "0.9879999756813049"
     }
 ]
     },
     "title": "",
     "width": 300,
     "height": 300,
-    "layer": [
-        {
-            "encoding": {
-                "x": {
-                    "field": "step",
-                    "type": "quantitative",
-                    "title": "step"
-                },
-                "y": {
-                    "field": "train/acc",
-                    "type": "quantitative",
-                    "title": "train/acc",
-                    "scale": {
-                        "zero": false
-                    }
-                },
-                "color": {
-                    "field": "rev",
-                    "type": "nominal"
-                }
-            },
-            "layer": [
-                {
-                    "mark": "line"
-                },
-                {
-                    "selection": {
-                        "label": {
-                            "type": "single",
-                            "nearest": true,
-                            "on": "mouseover",
-                            "encodings": [
-                                "x"
-                            ],
-                            "empty": "none",
-                            "clear": "mouseout"
-                        }
-                    },
-                    "mark": "point",
-                    "encoding": {
-                        "opacity": {
-                            "condition": {
-                                "selection": "label",
-                                "value": 1
-                            },
-                            "value": 0
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "transform": [
-                {
-                    "filter": {
-                        "selection": "label"
-                    }
-                }
-            ],
-            "layer": [
-                {
-                    "mark": {
-                        "type": "rule",
-                        "color": "gray"
-                    },
-                    "encoding": {
-                        "x": {
-                            "field": "step",
-                            "type": "quantitative"
-                        }
-                    }
-                },
-                {
-                    "encoding": {
-                        "text": {
-                            "type": "quantitative",
-                            "field": "train/acc"
-                        },
-                        "x": {
-                            "field": "step",
-                            "type": "quantitative"
-                        },
-                        "y": {
-                            "field": "train/acc",
-                            "type": "quantitative"
-                        }
-                    },
-                    "layer": [
-                        {
-                            "mark": {
-                                "type": "text",
-                                "align": "left",
-                                "dx": 5,
-                                "dy": -5
-                            },
-                            "encoding": {
-                                "color": {
-                                    "type": "nominal",
-                                    "field": "rev"
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+    "mark": {
+        "type": "line",
+        "point": true,
+        "tooltip": {
+            "content": "data"
         }
-    ]
+    },
+    "encoding": {
+        "x": {
+            "field": "step",
+            "type": "quantitative",
+            "title": "step"
+        },
+        "y": {
+            "field": "train/acc",
+            "type": "quantitative",
+            "title": "train/acc",
+            "scale": {
+                "zero": false
+            }
+        },
+        "color": {
+            "field": "rev",
+            "type": "nominal"
+        }
+    }
 }
 ;
             vegaEmbed('#static_train_acc', spec);
@@ -388,52 +226,52 @@
     "data": {
         "values": [
     {
-        "eval/loss": "0.11975103616714478",
+        "eval/loss": "0.11297857761383057",
         "rev": "workspace",
         "step": "0"
     },
     {
-        "eval/loss": "0.07571294158697128",
+        "eval/loss": "0.07820502668619156",
         "rev": "workspace",
         "step": "1"
     },
     {
-        "eval/loss": "0.0629018247127533",
+        "eval/loss": "0.058615319430828094",
         "rev": "workspace",
         "step": "2"
     },
     {
-        "eval/loss": "0.056850507855415344",
+        "eval/loss": "0.04752615466713905",
         "rev": "workspace",
         "step": "3"
     },
     {
-        "eval/loss": "0.04987969994544983",
+        "eval/loss": "0.04698098823428154",
         "rev": "workspace",
         "step": "4"
     },
     {
-        "eval/loss": "0.041165512055158615",
+        "eval/loss": "0.04196237027645111",
         "rev": "workspace",
         "step": "5"
     },
     {
-        "eval/loss": "0.04159972071647644",
+        "eval/loss": "0.041290707886219025",
         "rev": "workspace",
         "step": "6"
     },
     {
-        "eval/loss": "0.0412827730178833",
+        "eval/loss": "0.040776629000902176",
         "rev": "workspace",
         "step": "7"
     },
     {
-        "eval/loss": "0.037947725504636765",
+        "eval/loss": "0.039547957479953766",
         "rev": "workspace",
         "step": "8"
     },
     {
-        "eval/loss": "0.039395395666360855",
+        "eval/loss": "0.03633162006735802",
         "rev": "workspace",
         "step": "9"
     }
@@ -442,113 +280,32 @@
     "title": "",
     "width": 300,
     "height": 300,
-    "layer": [
-        {
-            "encoding": {
-                "x": {
-                    "field": "step",
-                    "type": "quantitative",
-                    "title": "step"
-                },
-                "y": {
-                    "field": "eval/loss",
-                    "type": "quantitative",
-                    "title": "eval/loss",
-                    "scale": {
-                        "zero": false
-                    }
-                },
-                "color": {
-                    "field": "rev",
-                    "type": "nominal"
-                }
-            },
-            "layer": [
-                {
-                    "mark": "line"
-                },
-                {
-                    "selection": {
-                        "label": {
-                            "type": "single",
-                            "nearest": true,
-                            "on": "mouseover",
-                            "encodings": [
-                                "x"
-                            ],
-                            "empty": "none",
-                            "clear": "mouseout"
-                        }
-                    },
-                    "mark": "point",
-                    "encoding": {
-                        "opacity": {
-                            "condition": {
-                                "selection": "label",
-                                "value": 1
-                            },
-                            "value": 0
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "transform": [
-                {
-                    "filter": {
-                        "selection": "label"
-                    }
-                }
-            ],
-            "layer": [
-                {
-                    "mark": {
-                        "type": "rule",
-                        "color": "gray"
-                    },
-                    "encoding": {
-                        "x": {
-                            "field": "step",
-                            "type": "quantitative"
-                        }
-                    }
-                },
-                {
-                    "encoding": {
-                        "text": {
-                            "type": "quantitative",
-                            "field": "eval/loss"
-                        },
-                        "x": {
-                            "field": "step",
-                            "type": "quantitative"
-                        },
-                        "y": {
-                            "field": "eval/loss",
-                            "type": "quantitative"
-                        }
-                    },
-                    "layer": [
-                        {
-                            "mark": {
-                                "type": "text",
-                                "align": "left",
-                                "dx": 5,
-                                "dy": -5
-                            },
-                            "encoding": {
-                                "color": {
-                                    "type": "nominal",
-                                    "field": "rev"
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+    "mark": {
+        "type": "line",
+        "point": true,
+        "tooltip": {
+            "content": "data"
         }
-    ]
+    },
+    "encoding": {
+        "x": {
+            "field": "step",
+            "type": "quantitative",
+            "title": "step"
+        },
+        "y": {
+            "field": "eval/loss",
+            "type": "quantitative",
+            "title": "eval/loss",
+            "scale": {
+                "zero": false
+            }
+        },
+        "color": {
+            "field": "rev",
+            "type": "nominal"
+        }
+    }
 }
 ;
             vegaEmbed('#static_eval_loss', spec);
@@ -563,52 +320,52 @@
     "data": {
         "values": [
     {
-        "eval/acc": "0.965499997138977",
+        "eval/acc": "0.9664000272750854",
         "rev": "workspace",
         "step": "0"
     },
     {
-        "eval/acc": "0.9771000146865845",
+        "eval/acc": "0.9758999943733215",
         "rev": "workspace",
         "step": "1"
     },
     {
-        "eval/acc": "0.9794999957084656",
+        "eval/acc": "0.9810000061988831",
         "rev": "workspace",
         "step": "2"
     },
     {
-        "eval/acc": "0.9818999767303467",
+        "eval/acc": "0.9842000007629395",
         "rev": "workspace",
         "step": "3"
     },
     {
-        "eval/acc": "0.9832000136375427",
+        "eval/acc": "0.9829000234603882",
         "rev": "workspace",
         "step": "4"
     },
     {
-        "eval/acc": "0.9854999780654907",
+        "eval/acc": "0.9847000241279602",
         "rev": "workspace",
         "step": "5"
     },
     {
-        "eval/acc": "0.9864000082015991",
+        "eval/acc": "0.9854999780654907",
         "rev": "workspace",
         "step": "6"
     },
     {
-        "eval/acc": "0.9858999848365784",
+        "eval/acc": "0.9861000180244446",
         "rev": "workspace",
         "step": "7"
     },
     {
-        "eval/acc": "0.9872000217437744",
+        "eval/acc": "0.9861000180244446",
         "rev": "workspace",
         "step": "8"
     },
     {
-        "eval/acc": "0.9866999983787537",
+        "eval/acc": "0.987500011920929",
         "rev": "workspace",
         "step": "9"
     }
@@ -617,113 +374,32 @@
     "title": "",
     "width": 300,
     "height": 300,
-    "layer": [
-        {
-            "encoding": {
-                "x": {
-                    "field": "step",
-                    "type": "quantitative",
-                    "title": "step"
-                },
-                "y": {
-                    "field": "eval/acc",
-                    "type": "quantitative",
-                    "title": "eval/acc",
-                    "scale": {
-                        "zero": false
-                    }
-                },
-                "color": {
-                    "field": "rev",
-                    "type": "nominal"
-                }
-            },
-            "layer": [
-                {
-                    "mark": "line"
-                },
-                {
-                    "selection": {
-                        "label": {
-                            "type": "single",
-                            "nearest": true,
-                            "on": "mouseover",
-                            "encodings": [
-                                "x"
-                            ],
-                            "empty": "none",
-                            "clear": "mouseout"
-                        }
-                    },
-                    "mark": "point",
-                    "encoding": {
-                        "opacity": {
-                            "condition": {
-                                "selection": "label",
-                                "value": 1
-                            },
-                            "value": 0
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "transform": [
-                {
-                    "filter": {
-                        "selection": "label"
-                    }
-                }
-            ],
-            "layer": [
-                {
-                    "mark": {
-                        "type": "rule",
-                        "color": "gray"
-                    },
-                    "encoding": {
-                        "x": {
-                            "field": "step",
-                            "type": "quantitative"
-                        }
-                    }
-                },
-                {
-                    "encoding": {
-                        "text": {
-                            "type": "quantitative",
-                            "field": "eval/acc"
-                        },
-                        "x": {
-                            "field": "step",
-                            "type": "quantitative"
-                        },
-                        "y": {
-                            "field": "eval/acc",
-                            "type": "quantitative"
-                        }
-                    },
-                    "layer": [
-                        {
-                            "mark": {
-                                "type": "text",
-                                "align": "left",
-                                "dx": 5,
-                                "dy": -5
-                            },
-                            "encoding": {
-                                "color": {
-                                    "type": "nominal",
-                                    "field": "rev"
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+    "mark": {
+        "type": "line",
+        "point": true,
+        "tooltip": {
+            "content": "data"
         }
-    ]
+    },
+    "encoding": {
+        "x": {
+            "field": "step",
+            "type": "quantitative",
+            "title": "step"
+        },
+        "y": {
+            "field": "eval/acc",
+            "type": "quantitative",
+            "title": "eval/acc",
+            "scale": {
+                "zero": false
+            }
+        },
+        "color": {
+            "field": "rev",
+            "type": "nominal"
+        }
+    }
 }
 ;
             vegaEmbed('#static_eval_acc', spec);

@@ -20,8 +20,8 @@ MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset in Tensorflow.
 After [installing DVC](https://dvc.org/doc/install) and cloning the repository, you can run:
 
 ```console
-virtualenv .venv
-. .venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 

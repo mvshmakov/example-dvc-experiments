@@ -8,8 +8,8 @@ stages:
       size: 17397976
       nfiles: 3
     - path: src
-      md5: 57f99becc6efff8a309d9527133f5f14.dir
-      size: 13860
+      md5: b170e89a4da541c095796f5b3372b12d.dir
+      size: 13812
       nfiles: 4
     params:
       params.yaml:
@@ -19,17 +19,17 @@ stages:
           epochs: 10
     outs:
     - path: dvclive/metrics.json
-      md5: 7517775fd68e9b34ac14900fa880a1ed
-      size: 203
+      md5: a13afe6a006bbdb95375bba25f653a27
+      size: 200
     - path: dvclive/plots
-      md5: cc56c2d7515bec2b09e83ecef076144b.dir
+      md5: 960d7544c55580daaacba4ebacf6e26d.dir
       size: 921
       nfiles: 4
     - path: models
-      md5: ae89d9f09588702383a104a1ccada989.dir
-      size: 4208952
+      md5: c00f7a68be0ac72c9b53f637e1ea9f6d.dir
+      size: 4207648
       nfiles: 1
     - path: plots
-      md5: 959b84f35ac76a04a886d433e4d78300.dir
-      size: 70715
+      md5: fc47b885c436ea589afa27ab96f1454f.dir
+      size: 73239
       nfiles: 2
